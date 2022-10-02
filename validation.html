@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM VALIDATION Document</title>
+    <script src="hombo.js"></script>
+</head>
+<body>
+
+    <h2>validation of forms</h2>
+
+
+    <form method="post" id="form">
+    <input type="text" id="fn" placeholder="first name" maxlength="10"> <br><br>
+    <input type="text" id="ln" placeholder="last name" required> <br><br>
+    <input type="text" id="pn" placeholder="phone number"required > <br><br>
+    <input type="text" id="em" placeholder="email" required> <br><br>
+    <input type="text" id="pw" placeholder="password" required> <br><br>
+    <input type="submit" value="register">
+
+</form>
+</body>
+
+<script>
+
+    var form = document.getElementById("form")
+    form.addEventListener(" submit", function(e){
+        var firstName = document.getElementById("fn")
+        var lastName = document.getElementById("ln")
+        var phoneNumber = document.getElementById("pn")
+        var email = document.getElementById("em")
+        var password = document.getElementById("pw")
+
+        if(firstName.value === "" && lastName.value === "" && phoneNumber.value === "" && emailAcc.value ==="" && password.value === "" ){
+            alert("please enter the above information")
+        }
+        else if(firstName.value === ""){
+            alert("enter the first name")
+            
+        }
+        else if(lasttName.value === ""){
+            alert("enter the last name")
+        }
+        else if(phoneNumber.value === ""){
+            alert("enter the phone number")
+        }
+        else if(emailAcc.value === ""){
+            alert("enter the email")
+        }
+        else if(password.value === ""){
+            alert("enter the password")
+        }
+       
+        
+
+        var firstName = document.forms["form"]["first name"].value
+        var lastName= document.forms["form"]["last name"].value
+        var password = document.forms["form"]["phone number"].value
+        var em = document.forms["form"]["email"].value
+        var pw = document.forms["form"]["password"].value
+
+        var regExpALP =  (/^[A-Za-z]+$/) 
+        var regExpALP = (/^[A-Za-z]+$/) 
+        var regExpNum =  "^\d+$"
+        var regExpEm =  /^[a-zA-Z0-9.! #$%&'*+/=? ^_`{|}~-]+@[a-zA-Z0-9-]+(?:\. [a-zA-Z0-9-]+)*$/
+        // var regExpPw =  /^(?=.*[0-9]
+
+    
+        if(fn.match(regExpALP)){
+            alert("only letters are allowed")
+        }
+        else if(ln.match(regExpALP)){
+            alert("only letters are allowed")
+        }
+        else if(!pn.match(regExpNum)){
+            alert("enter a correct phone number")
+        }
+        else if(!em.match(regExpEm)){
+            alert("enter a valid email")
+        }
+        else if(!fn.match(regExpPas)){
+            alert("enter a valid password")
+        }
+        else{
+            alert("okay !!!")
+            
+
+        } 
+           })
+        
+
+      
+    
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+    
+</script>
+</html>
